@@ -16,13 +16,13 @@ public class User {
 
     }
 
-    public User(String name, LocalDate birDate, String email, String gender, Status status, Role role) {
+    public User(String name, LocalDate birthDate, String email, String gender) {
         this.name = name;
         this.birthDate = birthDate;
         this.email = email;
         this.gender = gender;
-        this.status = status;
-        this.role = role;
+        this.status = status.ACTIVE;
+        this.role = role.CONSUMER;
     }
 
     public String getName() {

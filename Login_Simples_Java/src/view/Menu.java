@@ -7,44 +7,48 @@ import java.util.Scanner;
 import model.User;
 import model.enums.Role;
 import model.enums.Status;
+import validation.inputValidation;
 
 public class Menu {
 
     Scanner scan = new Scanner(System.in);
+    int value = 0;
 
-    public void showMenu() {
-        int value = 0;
-        System.out.println("###############################");
-        System.out.println("Escolha uma opção");
-        System.out.println("1. Cadastrar | 2. Login | 3. Sair");
-        value = scan.nextInt();
+    public void showMenu() {//----Menu
+        while (value != 3) {
+            System.out.println("###############################");
+            System.out.println("Escolha uma opção");
+            System.out.println("1. Cadastrar | 2. Login | 3. Sair");
+            String input = scan.nextLine();
+            Integer result = inputValidation.validadeIntEntry(input);
 
-        switch (value) {
-            case 1 -> {
-                System.out.println("Iniciando Cadastro... ");
-                registerForm();
+            if (result != null) {
+                value = result;    
             }
-            case 2 -> System.out.println("Login...");
-            case 3 -> System.out.println("Saindo...");
-            default -> System.out.println("Opção inválida!");
+
+            switch (value) {
+                case 1 -> {
+                    System.out.println("Iniciando Cadastro... ");
+                    registerForm();
+                }
+                case 2 -> System.out.println("Login...");
+                case 3 -> System.out.println("Saindo...");
+                default -> System.out.println("Opção inválida!");
+            }
         }
-    }
+
+    }//----Menu
 
     public void registerForm() {
-        User newUser = new User();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         System.out.println("Digite seu nome: ");
-        newUser.setName(scan.next());
+        String name = inputValidation.validateStringEntry(scan);
         System.out.println("Digite sua data de nascimento (dd/MM/yyyy): ");
-        String birthDateInput = scan.next();
-        newUser.setBirthDate(LocalDate.parse(birthDateInput, formatter));
+        LocalDate birDate = inputValidation.validateDateEntry(scan);
         System.out.println("Digite seu email: ");
-        newUser.setEmail(scan.next());
+        String email = inputValidation.validateEmailEntry(scan);
         System.out.println("Digite seu gênero: ");
-        newUser.setGender(scan.next());
-        newUser.setStatus(Status.ACTIVE);
-        newUser.setRole(Role.CONSUMER);
+        String gender = inputValidation.validateStringEntry(scan);
+        User newUser = new User(name, birDate, email, gender);
         System.out.println(newUser);
     }
 
