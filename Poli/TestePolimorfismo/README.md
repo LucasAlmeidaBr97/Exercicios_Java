@@ -2,7 +2,7 @@
 
 Este projeto contém exercícios e exemplos práticos focados no conceito de **Polimorfismo** em Java. O objetivo é demonstrar como objetos de diferentes classes podem ser tratados de forma uniforme através de herança e sobrescrita de métodos.
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 O workspace segue a estrutura padrão de projetos Java no VS Code:
 
@@ -10,7 +10,7 @@ O workspace segue a estrutura padrão de projetos Java no VS Code:
 - `lib`: Pasta para dependências e bibliotecas externas.
 - `bin`: Pasta onde os arquivos compilados (.class) são gerados automaticamente.
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 - Java JDK instalado.
