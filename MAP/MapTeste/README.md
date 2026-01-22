@@ -1,18 +1,13 @@
-## Getting Started
+# Prática de Java Map
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório foi criado com o objetivo de praticar e fixar os conceitos relacionados à interface `Map` do Java e suas implementações, como o `HashMap`.
 
-## Folder Structure
+> **Nota:** Este projeto é focado puramente em prática e aprendizado, não tendo como objetivo servir de portfólio.
 
-The workspace contains two folders by default, where:
+## Conteúdo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O código atual explora:
+- Criação de um `HashMap`.
+- Inserção de valores (`put`).
+- Verificação de chaves (`containsKey`).
+- Iteração sobre os elementos (`entrySet`).
