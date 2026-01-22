@@ -1,18 +1,22 @@
-## Getting Started
+# Teste de Polimorfismo (Java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto contém exercícios e exemplos práticos focados no conceito de **Polimorfismo** em Java. O objetivo é demonstrar como objetos de diferentes classes podem ser tratados de forma uniforme através de herança e sobrescrita de métodos.
 
-## Folder Structure
+## 📂 Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+O workspace segue a estrutura padrão de projetos Java no VS Code:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `src`: Pasta contendo o código-fonte (.java).
+- `lib`: Pasta para dependências e bibliotecas externas.
+- `bin`: Pasta onde os arquivos compilados (.class) são gerados automaticamente.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🚀 Como Executar
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Pré-requisitos
+- Java JDK instalado.
+- Visual Studio Code (recomendado).
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Passos
+1. Abra a pasta do projeto no VS Code.
+2. Navegue até a pasta `src` e abra o arquivo que contém o método `main`.
+3. Clique em **Run** (ou pressione `F5`) para compilar e executar a aplicação.
