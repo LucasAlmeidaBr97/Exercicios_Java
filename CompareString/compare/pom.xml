@@ -71,6 +71,18 @@
             <artifactId>checkstyle-rules</artifactId>
             <version>4.9.3</version>
           </dependency>
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+          </dependency>
+        <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-engine</artifactId>
+          <version>${junit.version}</version>
+          <scope>test</scope>
+        </dependency>
         </dependencies>
         <configuration>
           <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
