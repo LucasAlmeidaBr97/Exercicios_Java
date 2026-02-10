@@ -1,6 +1,9 @@
 interface Taxi {
     void reservar(); //único método abstrato
-    void outroMetodo(); // outro abstrato gerá erro!
+
+    default void outroMetodo() {
+        System.out.println("Outro método"); //Método default com implementação
+    } 
 
 }
 
