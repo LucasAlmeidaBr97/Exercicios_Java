@@ -1,5 +1,5 @@
 interface Taxi {
-    void reservar(String origem); //único método abstrato
+    double reservar(String origem, String destino); //único método abstrato
 
    
 
@@ -8,9 +8,11 @@ interface Taxi {
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Taxi taxi = (origem) -> { // () parametros do método; -> chaves corpo do método implementado{}
-            System.out.println("Taxi reservado. Origem: " + origem);
+        Taxi taxi = (origem, destino) -> { // () parametros do método; -> chaves corpo do método implementado{}
+            System.out.println("Taxi reservado. Origem: " + origem + " => Destino: " + destino);
+            return 80.60;
         };
-        taxi.reservar("Campinas");
+        double valorReserva = taxi.reservar("Campinas", "São Paulo");
+        System.out.println("Valor da reserva: " + valorReserva);
     }
 }
