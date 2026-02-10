@@ -1,5 +1,6 @@
 interface Taxi {
-    void reservar();
+    void reservar(); //único método abstrato
+    void outroMetodo(); // outro abstrato gerá erro!
 
 }
 
