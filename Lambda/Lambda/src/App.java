@@ -1,8 +1,6 @@
+@FunctionalInterface
 interface Taxi {
     double reservar(String origem, String destino); //único método abstrato
-
-   
-
 }
 
 public class App {
