@@ -3,7 +3,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class App {
+public class JavaLambdaActionListener {
+    
     public static void main(String[] args) throws Exception {
 
         // Java 8: FUNÇÕES LAMBDA
