@@ -1,10 +1,11 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        converteMais();
+        dobraValores();
     }
 
     // Exercício 1
@@ -34,6 +35,16 @@ public class App {
             .collect(Collectors.toList());
 
         System.out.println( nomesMaísculos);
+    }
+
+    // Exercício 3
+    public static void dobraValores() {
+        List<Integer> numeros = Arrays.asList(2,4,5,8);
+        List<Integer> dobro = numeros.stream()
+            .map(d -> d * 2)
+            .collect(Collectors.toList());
+
+        System.out.println(dobro);
     }
 
 }
