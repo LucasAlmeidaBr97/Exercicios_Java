@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Exercicio2 {
@@ -31,7 +32,16 @@ public class Exercicio2 {
         List<Integer> numbers2 = sortNumbers(Arrays.asList(10, 3, 7, 2, 40, 15));
         System.out.println(numbers2);
         System.out.println(numbers2 = descendingOrder(numbers2));
-        
+        System.out.println(filterNames(Arrays.asList(
+                "Lucas",
+                "Amanda",
+                "José",
+                "Fernanda",
+                "Ana")));
+                
+        //Exercício 7
+        System.out.println(addAll(Arrays.asList(5,10,15,20)).get());
+
     }
 
     // Exercicio 3
@@ -48,17 +58,30 @@ public class Exercicio2 {
                 .count();
     }
 
-    //Exercicio 5
+    // Exercicio 5
     public static List<Integer> sortNumbers(List<Integer> number) {
         return number.stream()
                 .sorted()
                 .collect(Collectors.toList());
     }
 
-    public static List<Integer> descendingOrder (List<Integer> number) {
+    public static List<Integer> descendingOrder(List<Integer> number) {
         return number.stream()
-            .sorted(Comparator.reverseOrder())
-            .collect(Collectors.toList());
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+    }
+
+    // Exercício 6
+    public static List<String> filterNames(List<String> names) {
+        return names.stream()
+                .filter(name -> name.length() > 5)
+                .collect(Collectors.toList());
+    }
+
+    // Exercício 7
+    public static Optional<Integer> addAll (List<Integer> numbers) {
+        return numbers.stream()
+            .reduce((n1, n2) -> n1 + n2);
     }
 
 }
