@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -42,6 +43,31 @@ public class Exercicio2 {
         //Exercício 7
         System.out.println(addAll(Arrays.asList(5,10,15,20)).get());
 
+        //Exercício 8
+        List<Double> notes = new ArrayList<>();
+
+        notes.add(8.5);
+        notes.addAll(Arrays.asList(7.0, 9.5, 6.0));
+        System.out.println(average(notes));
+
+
+        //Exercicio 9
+        int [] numbers5 = new int[5];
+        numbers5[0] = 4;
+        numbers5[1] = 18;
+        numbers5[2] = 3;
+        numbers5[3] = 90;
+        numbers5[4] = 12;
+
+        System.out.println(bigger(numbers5));
+
+        //Exercicio 10
+        int [] numbers6 = {1,2,3,2,4,5,3,6};
+        numbers6 = removeEquals(numbers6);
+        for (int numbers62 : numbers6) {
+            System.out.println(numbers62);
+        }
+
     }
 
     // Exercicio 3
@@ -75,7 +101,8 @@ public class Exercicio2 {
     public static List<String> filterNames(List<String> names) {
         return names.stream()
                 .filter(name -> name.length() > 5)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList())
+;
     }
 
     // Exercício 7
@@ -84,4 +111,25 @@ public class Exercicio2 {
             .reduce((n1, n2) -> n1 + n2);
     }
 
+    //Exercicio 8
+    public static double average(List<Double> notes ) {
+        return notes.stream()
+            .mapToDouble(n -> n.doubleValue())
+            .average()
+            .orElse(0.0);
+    }
+
+    //Exercicio 9 
+    public static int bigger (int[] numbers) {
+        return Arrays.stream(numbers)
+            .max()
+            .orElse(0);
+    }
+
+    //Exercício 10
+    public static int [] removeEquals(int [] numbers) {
+        return Arrays.stream(numbers)
+            .distinct()
+            .toArray();
+    }
 }
