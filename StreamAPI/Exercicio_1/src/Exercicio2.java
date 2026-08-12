@@ -61,7 +61,9 @@ public class Exercicio2 {
 
         System.out.println(bigger(numbers5));
 
-        //Exercicio 10
+        System.out.println(minor(numbers5));
+
+        //Exercicio 11
         int [] numbers6 = {1,2,3,2,4,5,3,6};
         numbers6 = removeEquals(numbers6);
         for (int numbers62 : numbers6) {
@@ -126,7 +128,14 @@ public class Exercicio2 {
             .orElse(0);
     }
 
-    //Exercício 10
+    //Exercicio 10
+    public static int minor (int[] numbers) {
+        return Arrays.stream(numbers)
+            .min()
+            .orElse(0);
+    }
+
+    //Exercício 11
     public static int [] removeEquals(int [] numbers) {
         return Arrays.stream(numbers)
             .distinct()
